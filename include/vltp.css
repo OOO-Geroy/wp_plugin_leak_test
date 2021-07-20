@@ -1,0 +1,54 @@
+.vltp-test .vltp-start {
+	padding:0 10px;
+	background:#ddd;
+	border-radius:20px;
+	display:inline-block;
+	cursor:pointer;
+	width:250px;
+	text-align:center;
+	height:110px;
+	position:relative;
+	line-height:110px;
+	font-size:40px;
+}
+
+.vltp-test .vltp-title,
+.vltp-test .vltp-results div ,
+.vltp-test .vltp-conclusion div {
+	margin-top:10px;
+}
+
+.vltp-test .vltp-conclusion {
+	border-top:1px solid #555;
+	margin-top:10px;
+}
+
+.vltp-test .vltp-start img {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+}
+
+#vltp-test-img {
+	width:1px;
+	height:1px;
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+
+.vltp-test .vltp-results div,
+.vltp-test .vltp-conclusion div {
+	line-height:20px;
+}
+
+.vltp-test .vltp-results div img {
+	vertical-align:middle;
+	display:inline-block;
+	border: 1px solid #b0b0b0;
+	padding: 1px;
+	margin-bottom:2px;
+}
