@@ -86,7 +86,7 @@ function vltp_shortcode($attrs)
 	wp_localize_script('vltp-js', 'vltp_settings_' . $id, $script_array);
 
 	$content = '<div class="vltp-test">';
-	$content .= '<div class="vltp-start" data-type="' . esc_attr($row['vltp_type']) . '" data-id="' . esc_attr($id) . '">' . $row['vltp_start'] . '</div>';
+	$content .= '<div class="vltp-start" data-type="' . esc_attr($row['vltp_type']) . '" data-id="' . esc_attr($id) . '">' . __($row['vltp_start'], 'vpn-leaks-test') . '</div>';
 
 	$test_id = isset($_REQUEST['vltp_test_id']) ? intval($_REQUEST['vltp_test_id']) : 0;
 	$vltp_id = isset($_REQUEST['vltp_id']) ? intval($_REQUEST['vltp_id']) : 0;
@@ -168,14 +168,12 @@ function vltp_test_result($row)
 		$code = $th->getCode();
 		$msg = $th->getMessage();
 
-		if ($code >= 20 && $code < 30) $results['error'] = $msg; /*array_push($results, [
-			"done" => "0",
-			"type" => "done"
-		]);*/
+		if ($code >= 20 && $code < 30) $results['error'] = $msg;
+
+		echo $msg;
 	}
 
-	
-	echo get_locale();
+
 	//var_dump($results);
 
 	if ($results && !$results['error']) {
@@ -548,7 +546,8 @@ function generate_test_result_by_html($xpath, $type)
 					$res_el['country'] = $sNode->getAttribute("data-ctr");
 					$res_el['country_name'] = $sNode->getAttribute("data-ctrname");
 				}
-				if ($ind === 2) {
+
+				if ($ind + 1 === count($trNode->childNodes)) {
 					$res_el['asn'] = $tdNode->textContent;
 				}
 			}
@@ -570,20 +569,21 @@ function generate_test_conclusion_by_html($xpath)
 			"asn" => "",
 			"country" => "",
 			"country_name" => "",
-			"ip" => $node->childNodes[0]->textContent,
+			"ip" => __(trim($node->childNodes[0]->textContent), 'vpn-leaks-test'),
 			"type" => "conclusion"
 		]);
 	}
 	if ($node->childNodes[1]) {
+		[$str, $replace] = prepareConclusionForInt($node->childNodes[1]->textContent);
 		array_push($conclusions, [
 			"asn" => "",
 			"country" => "",
 			"country_name" => "",
-			"ip" => $node->childNodes[1]->textContent,
+			"ip" => sprintf(__(trim($str), 'vpn-leaks-test'), ...$replace),
 			"type" => "conclusion"
 		]);
 	}
-
+	
 	return $conclusions;
 }
 
@@ -616,4 +616,22 @@ function DOMinnerHTML(DOMNode $element)
 	}
 
 	return $innerHTML;
+}
+
+
+function prepareConclusionForInt($str)
+{
+	$re = '/".+"/mU';
+	preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
+	$result = array();
+	array_walk_recursive($matches, function ($v) use (&$result) {
+		$result[] = $v;
+	});
+	$result = array_map(function ($s) {
+		return preg_replace('/(^"|"$)/m', '', $s);
+	}, $result);
+
+	$new_str = preg_replace($re, '"%s"', str_replace("%", "%%", $str));
+
+	return [$new_str, $result];
 }

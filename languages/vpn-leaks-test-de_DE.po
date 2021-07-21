@@ -1,23 +1,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VPN Leaks Test Package\n"
-"POT-Creation-Date: 2021-07-20 23:42+0300\n"
-"PO-Revision-Date: 2021-07-20 23:42+0300\n"
+"POT-Creation-Date: 2021-07-21 23:59+0300\n"
+"PO-Revision-Date: 2021-07-22 00:58+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: vpn-leaks-test.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -30,34 +28,22 @@ msgid "Quick setup guide"
 msgstr "Kurzanleitung zur Einrichtung"
 
 #: vltp-admin-help.php:28
-msgid ""
-"1. Click \"<b>Add New VPN test</b>\" and choose the test you want to add. "
-"Fill in the form and save the test."
-msgstr ""
-"1. Klicken Sie auf<b>\"Neuen VPN-Test hinzufügen</b>\" und wählen Sie den "
-"Test aus, den Sie hinzufügen möchten. Füllen Sie das Formular aus und "
-"speichern Sie den Test."
+msgid "1. Click \"<b>Add New VPN test</b>\" and choose the test you want to add. Fill in the form and save the test."
+msgstr "1. Klicken Sie auf<b>\"Neuen VPN-Test hinzufügen</b>\" und wählen Sie den Test aus, den Sie hinzufügen möchten. Füllen Sie das Formular aus und speichern Sie den Test."
 
 #: vltp-admin-help.php:29
 msgid ""
-"2. Create the page using Wordpress common interface and Copy and paste test "
-"shortcode into the page content. Shortcode format: <b style=\"padding:2px "
-"10px 3px;background:#b6f7b6\">[vltp id=YOUR_TEST_ID]</b>"
-msgstr ""
-"2. Erstellen Sie die Seite mit der allgemeinen Wordpress-Oberfläche und "
-"kopieren Sie den Test-Shortcode und fügen Sie ihn in den Seiteninhalt ein. "
-"Shortcode-Format: <b style=\"padding:2px 10px 3px;background:#b6f7b6\">[vltp "
+"2. Create the page using Wordpress common interface and Copy and paste test shortcode into the page content. Shortcode format: <b style=\"padding:2px 10px 3px;background:#b6f7b6\">[vltp "
 "id=YOUR_TEST_ID]</b>"
+msgstr ""
+"2. Erstellen Sie die Seite mit der allgemeinen Wordpress-Oberfläche und kopieren Sie den Test-Shortcode und fügen Sie ihn in den Seiteninhalt ein. Shortcode-Format: <b style=\"padding:2px 10px 3px;"
+"background:#b6f7b6\">[vltp id=YOUR_TEST_ID]</b>"
 
 #: vltp-admin-help.php:30
-msgid ""
-"3. All the tests use the same interface. It consists from the <b>Start "
-"button</b> and the test results. The test result is displayed as a table of "
-"IPs and conclusion message."
+msgid "3. All the tests use the same interface. It consists from the <b>Start button</b> and the test results. The test result is displayed as a table of IPs and conclusion message."
 msgstr ""
-"3. Alle Tests verwenden die gleiche Oberfläche. Sie besteht aus der "
-"<b>Schaltfläche Start</b> und den Testergebnissen. Das Testergebnis wird in "
-"Form einer Tabelle mit IPs und einer Abschlussmeldung angezeigt."
+"3. Alle Tests verwenden die gleiche Oberfläche. Sie besteht aus der <b>Schaltfläche Start</b> und den Testergebnissen. Das Testergebnis wird in Form einer Tabelle mit IPs und einer Abschlussmeldung "
+"angezeigt."
 
 #: vltp-admin-help.php:37
 msgid "DNS leak test"
@@ -69,31 +55,19 @@ msgstr "DNS Lecktest einrichten"
 
 #: vltp-admin-help.php:40
 msgid "1. Please Add new test and choose DNS leak test as a test type."
-msgstr ""
-"1. Bitte fügen Sie einen neuen Test hinzu und wählen Sie als Testtyp DNS-"
-"Lecktest."
+msgstr "1. Bitte fügen Sie einen neuen Test hinzu und wählen Sie als Testtyp DNS-Lecktest."
 
 #: vltp-admin-help.php:41 vltp-admin-help.php:53 vltp-admin-help.php:65
-msgid ""
-"2. Fill in the rest of the form and use the shortcut code for integration."
-msgstr ""
-"2. Füllen Sie den Rest des Formulars aus und verwenden Sie den Shortcut-Code "
-"für die Integration."
+msgid "2. Fill in the rest of the form and use the shortcut code for integration."
+msgstr "2. Füllen Sie den Rest des Formulars aus und verwenden Sie den Shortcut-Code für die Integration."
 
 #: vltp-admin-help.php:42
 msgid ""
-"3. The Dns leak test is very simple to use. To start the test user needs to "
-"click the \"Start test\" button. Dns queries will be generated and send to "
-"the specified domain. The IPs from which was DNS queries received will be "
-"displayed as a result. More information can be found <a target=_blank href="
-"\"https://bash.ws/dnsleak\">here</a>"
+"3. The Dns leak test is very simple to use. To start the test user needs to click the \"Start test\" button. Dns queries will be generated and send to the specified domain. The IPs from which was DNS "
+"queries received will be displayed as a result. More information can be found <a target=_blank href=\"https://bash.ws/dnsleak\">here</a>"
 msgstr ""
-"3. Der Dns-Lecktest ist sehr einfach zu bedienen. Um den Test zu starten, "
-"muss der Benutzer auf die Schaltfläche \"Test starten\" klicken. Es werden "
-"DNS-Anfragen generiert und an die angegebene Domain gesendet. Als Ergebnis "
-"werden die IPs angezeigt, von denen DNS-Anfragen empfangen wurden. Weitere "
-"Informationen finden Sie <a target=_blank href=\"https://bash.ws/dnsleak"
-"\">hier</a>"
+"3. Der Dns-Lecktest ist sehr einfach zu bedienen. Um den Test zu starten, muss der Benutzer auf die Schaltfläche \"Test starten\" klicken. Es werden DNS-Anfragen generiert und an die angegebene Domain "
+"gesendet. Als Ergebnis werden die IPs angezeigt, von denen DNS-Anfragen empfangen wurden. Weitere Informationen finden Sie <a target=_blank href=\"https://bash.ws/dnsleak\">hier</a>"
 
 #: vltp-admin-help.php:49
 msgid "Email leak test"
@@ -105,21 +79,15 @@ msgstr "E-Mail-IP-Lecktest einrichten"
 
 #: vltp-admin-help.php:52
 msgid "1. Please Add new test and choose Email leak test as a test type."
-msgstr ""
-"1. Bitte fügen Sie einen neuen Test hinzu und wählen Sie E-Mail-Lecktest als "
-"Testart."
+msgstr "1. Bitte fügen Sie einen neuen Test hinzu und wählen Sie E-Mail-Lecktest als Testart."
 
 #: vltp-admin-help.php:54
 msgid ""
-"3. The Email leak test requires the user to send an email to the specified "
-"email address. The email header will be analyzed for IP leaks. More "
-"information is available <a target=_blank href=\"https://bash.ws/email-leak-"
-"test\">here</a>."
+"3. The Email leak test requires the user to send an email to the specified email address. The email header will be analyzed for IP leaks. More information is available <a target=_blank href=\"https://"
+"bash.ws/email-leak-test\">here</a>."
 msgstr ""
-"3. Beim E-Mail-Lecktest muss der Benutzer eine E-Mail an die angegebene E-"
-"Mail-Adresse senden. Der E-Mail-Header wird auf IP-Lecks analysiert. Weitere "
-"Informationen finden Sie <a target=_blank href=\"https://bash.ws/email-leak-"
-"test\">hier</a>."
+"3. Beim E-Mail-Lecktest muss der Benutzer eine E-Mail an die angegebene E-Mail-Adresse senden. Der E-Mail-Header wird auf IP-Lecks analysiert. Weitere Informationen finden Sie <a target=_blank href="
+"\"https://bash.ws/email-leak-test\">hier</a>."
 
 #: vltp-admin-help.php:61
 msgid "WebRTC leak test"
@@ -131,24 +99,15 @@ msgstr "WebRTC-Lecktest einrichten"
 
 #: vltp-admin-help.php:64
 msgid "1. Please Add new test and choose WebRTC leak test as a test type."
-msgstr ""
-"1. Bitte fügen Sie einen neuen Test hinzu und wählen Sie WebRTC-Lecktest als "
-"Testtyp."
+msgstr "1. Bitte fügen Sie einen neuen Test hinzu und wählen Sie WebRTC-Lecktest als Testtyp."
 
 #: vltp-admin-help.php:66
 msgid ""
-"3. The WebRTC leak test requires the user to click the \"Start test\" "
-"button. The test is very quick and simple. Only javascript is used to do the "
-"test (source code is included). The Internet Browser will be tested for "
-"WebRTC IP leak during the test. More information is available <a "
-"target=_blank href=\"https://bash.ws/webrtc-leak-test\">here</a>."
+"3. The WebRTC leak test requires the user to click the \"Start test\" button. The test is very quick and simple. Only javascript is used to do the test (source code is included). The Internet Browser "
+"will be tested for WebRTC IP leak during the test. More information is available <a target=_blank href=\"https://bash.ws/webrtc-leak-test\">here</a>."
 msgstr ""
-"3. Für den WebRTC-Lecktest muss der Benutzer auf die Schaltfläche \"Test "
-"starten\" klicken. Der Test ist sehr schnell und einfach. Zur Durchführung "
-"des Tests wird nur Javascript verwendet (Quellcode ist enthalten). Während "
-"des Tests wird der Internet-Browser auf WebRTC-IP-Lecks getestet. Weitere "
-"Informationen finden Sie <a target=_blank href=\"https://bash.ws/webrtc-leak-"
-"test\">hier</a>."
+"3. Für den WebRTC-Lecktest muss der Benutzer auf die Schaltfläche \"Test starten\" klicken. Der Test ist sehr schnell und einfach. Zur Durchführung des Tests wird nur Javascript verwendet (Quellcode ist "
+"enthalten). Während des Tests wird der Internet-Browser auf WebRTC-IP-Lecks getestet. Weitere Informationen finden Sie <a target=_blank href=\"https://bash.ws/webrtc-leak-test\">hier</a>."
 
 #: vltp-admin-page.php:24
 msgid "VPN leaks test configuration"
@@ -189,12 +148,8 @@ msgid "The VPN test inserted successfully"
 msgstr "Der VPN-Test wurde erfolgreich eingefügt"
 
 #: vltp-admin-page.php:204
-msgid ""
-"No tests was added. Please use \"<b>Add New VPN test</b>\" button to add new "
-"test."
-msgstr ""
-"Es wurde kein Test hinzugefügt. Bitte verwenden Sie die Schaltfläche<b>"
-"\"Neuen VPN-Test hinzufügen</b>\", um einen neuen Test hinzuzufügen."
+msgid "No tests was added. Please use \"<b>Add New VPN test</b>\" button to add new test."
+msgstr "Es wurde kein Test hinzugefügt. Bitte verwenden Sie die Schaltfläche<b>\"Neuen VPN-Test hinzufügen</b>\", um einen neuen Test hinzuzufügen."
 
 #: vltp-admin-page.php:240
 msgid "DNS Leak Test"
@@ -242,14 +197,11 @@ msgstr "Geben Sie ein HTML für die Schaltfläche \" <b>Test starten\"</b> ein"
 
 #: vltp-admin-page.php:352
 msgid "This HTML is used for formatting the test results line by line. "
-msgstr ""
-"Dieses HTML wird zur zeilenweisen Formatierung der Testergebnisse verwendet "
+msgstr "Dieses HTML wird zur zeilenweisen Formatierung der Testergebnisse verwendet "
 
 #: vltp-admin-page.php:353
 msgid "This HTML is used for formatting the tests conclusion line by line. "
-msgstr ""
-"Dieses HTML wird für die zeilenweise Formatierung des Testabschlusses "
-"verwendet "
+msgstr "Dieses HTML wird für die zeilenweise Formatierung des Testabschlusses verwendet "
 
 #: vltp-admin-page.php:357
 msgid "Update Test"
@@ -265,57 +217,56 @@ msgstr "VPN-Lecktest"
 
 #: vltp-shortcode.php:78
 #, php-format
-msgid ""
-"Please send an email to <a href=\"mailto:%s\">%s</a>. The email subject and "
-"body doesn't matter. Do not refresh the page."
-msgstr ""
-"Bitte senden Sie eine E-Mail an <a href=\"mailto:%s\">%s</a>. Der E-Mail-"
-"Betreff und -Text spielt keine Rolle. Aktualisieren Sie die Seite nicht."
+msgid "Please send an email to <a href=\"mailto:%s\">%s</a>. The email subject and body doesn't matter. Do not refresh the page."
+msgstr "Bitte senden Sie eine E-Mail an <a href=\"mailto:%s\">%s</a>. Der E-Mail-Betreff und -Text spielt keine Rolle. Aktualisieren Sie die Seite nicht."
 
 #: vltp-shortcode.php:83
 #, php-format
-msgid ""
-"Please download the torrent <a href=\"%s\">%s.torrent</a>. Do not refresh "
-"the page."
-msgstr ""
-"Bitte laden Sie den Torrent <a href=\"%s\">%s.torrent</a> herunter. "
-"Aktualisieren Sie die Seite nicht."
+msgid "Please download the torrent <a href=\"%s\">%s.torrent</a>. Do not refresh the page."
+msgstr "Bitte laden Sie den Torrent <a href=\"%s\">%s.torrent</a> herunter. Aktualisieren Sie die Seite nicht."
 
-#: vltp-shortcode.php:213
+#: vltp-shortcode.php:212
 #, php-format
 msgid "You use %d DNS server"
 msgid_plural "You use %d DNS servers"
 msgstr[0] "Sie verwenden %d DNS-Server"
 msgstr[1] "Sie verwenden %d DNS-Server"
 
-#: vltp-shortcode.php:215
+#: vltp-shortcode.php:214
 #, php-format
 msgid "Your email contains %d IP"
 msgid_plural "Your email contains %d IPs"
 msgstr[0] "Ihre E-Mail enthält %d IP"
 msgstr[1] "Ihre E-Mail enthält %d IPs"
 
-#: vltp-shortcode.php:217
+#: vltp-shortcode.php:216
 #, php-format
 msgid "WebRTC is able to see %d IP"
 msgid_plural "WebRTC is able to see %d IPs"
 msgstr[0] "WebRTC kann %d IP sehen"
 msgstr[1] "WebRTC kann %d IPs sehen"
 
-#: vltp-shortcode.php:219
+#: vltp-shortcode.php:218
 #, php-format
 msgid "Your torrent application shares %d IP"
 msgid_plural "Your torrent application shares %d IPs"
 msgstr[0] "Ihre Torrent-Anwendung gibt %d IP frei"
 msgstr[1] "Ihre Torrent-Anwendung gibt %d IPs frei"
 
-#: vltp-shortcode.php:285
+#: vltp-shortcode.php:284
 msgid "The Test failed, please try again..."
 msgstr "Der Test ist fehlgeschlagen, bitte versuchen Sie es erneut..."
 
-#: vltp-shortcode.php:329 vltp-shortcode.php:357 vltp-shortcode.php:386
+#: vltp-shortcode.php:328 vltp-shortcode.php:356 vltp-shortcode.php:385
 msgid "The internal communication error occurred..."
 msgstr "Der interne Kommunikationsfehler ist aufgetreten..."
+
+#: vltp-shortcode.php:587
+#, php-format
+msgid "You use different ISPs for the DNS and Internet. if \"%s\" belongs to VPN then your connection is 100%% secured. But your DNS queries are handled by \"%s\". The question is: do you trust it or not."
+msgstr ""
+"Sie verwenden verschiedene ISPs für den DNS und das Internet. Wenn \"%s\" zu VPN gehört, dann ist Ihre Verbindung 100%% sgesichert. Aber Ihre DNS-Anfragen werden von \"%s\" bearbeitet. Die Frage ist: "
+"Vertrauen Sie ihm oder nicht."
 
 #. Plugin Name of the plugin/theme
 msgid "VPN Leaks Test Package"
@@ -326,12 +277,8 @@ msgid "https://bash.ws/"
 msgstr "https://bash.ws/"
 
 #. Description of the plugin/theme
-msgid ""
-"The plugin contains the leaks test package: DNS leak test, WEB rtc IP leak "
-"test, Email IP leak test. You can integrate these tests into your website."
-msgstr ""
-"Das Plugin enthält das Lecktest-Paket: DNS-Lecktest, WEB rtc IP-Lecktest, E-"
-"Mail-IP-Lecktest. Sie können diese Tests in Ihre Website integrieren."
+msgid "The plugin contains the leaks test package: DNS leak test, WEB rtc IP leak test, Email IP leak test. You can integrate these tests into your website."
+msgstr "Das Plugin enthält das Lecktest-Paket: DNS-Lecktest, WEB rtc IP-Lecktest, E-Mail-IP-Lecktest. Sie können diese Tests in Ihre Website integrieren."
 
 #. Author of the plugin/theme
 msgid "macvk"
@@ -340,3 +287,9 @@ msgstr "macvk"
 #. Author URI of the plugin/theme
 msgid "https://github.com/macvk"
 msgstr "https://github.com/macvk"
+
+msgid "<b>Start test</b>"
+msgstr "<b>Test starten</b>"
+
+msgid "DNS may be leaking."
+msgstr "DNS kann undicht sein."
