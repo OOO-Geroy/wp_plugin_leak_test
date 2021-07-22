@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: VPN Leaks Test Package\n"
 "POT-Creation-Date: 2021-07-21 23:59+0300\n"
-"PO-Revision-Date: 2021-07-22 00:58+0300\n"
+"PO-Revision-Date: 2021-07-22 21:36+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -33,8 +33,7 @@ msgstr "1. Klicken Sie auf<b>\"Neuen VPN-Test hinzufügen</b>\" und wählen Sie 
 
 #: vltp-admin-help.php:29
 msgid ""
-"2. Create the page using Wordpress common interface and Copy and paste test shortcode into the page content. Shortcode format: <b style=\"padding:2px 10px 3px;background:#b6f7b6\">[vltp "
-"id=YOUR_TEST_ID]</b>"
+"2. Create the page using Wordpress common interface and Copy and paste test shortcode into the page content. Shortcode format: <b style=\"padding:2px 10px 3px;background:#b6f7b6\">[vltp id=YOUR_TEST_ID]</b>"
 msgstr ""
 "2. Erstellen Sie die Seite mit der allgemeinen Wordpress-Oberfläche und kopieren Sie den Test-Shortcode und fügen Sie ihn in den Seiteninhalt ein. Shortcode-Format: <b style=\"padding:2px 10px 3px;"
 "background:#b6f7b6\">[vltp id=YOUR_TEST_ID]</b>"
@@ -83,8 +82,8 @@ msgstr "1. Bitte fügen Sie einen neuen Test hinzu und wählen Sie E-Mail-Leckte
 
 #: vltp-admin-help.php:54
 msgid ""
-"3. The Email leak test requires the user to send an email to the specified email address. The email header will be analyzed for IP leaks. More information is available <a target=_blank href=\"https://"
-"bash.ws/email-leak-test\">here</a>."
+"3. The Email leak test requires the user to send an email to the specified email address. The email header will be analyzed for IP leaks. More information is available <a target=_blank href=\"https://bash."
+"ws/email-leak-test\">here</a>."
 msgstr ""
 "3. Beim E-Mail-Lecktest muss der Benutzer eine E-Mail an die angegebene E-Mail-Adresse senden. Der E-Mail-Header wird auf IP-Lecks analysiert. Weitere Informationen finden Sie <a target=_blank href="
 "\"https://bash.ws/email-leak-test\">hier</a>."
@@ -103,8 +102,8 @@ msgstr "1. Bitte fügen Sie einen neuen Test hinzu und wählen Sie WebRTC-Leckte
 
 #: vltp-admin-help.php:66
 msgid ""
-"3. The WebRTC leak test requires the user to click the \"Start test\" button. The test is very quick and simple. Only javascript is used to do the test (source code is included). The Internet Browser "
-"will be tested for WebRTC IP leak during the test. More information is available <a target=_blank href=\"https://bash.ws/webrtc-leak-test\">here</a>."
+"3. The WebRTC leak test requires the user to click the \"Start test\" button. The test is very quick and simple. Only javascript is used to do the test (source code is included). The Internet Browser will "
+"be tested for WebRTC IP leak during the test. More information is available <a target=_blank href=\"https://bash.ws/webrtc-leak-test\">here</a>."
 msgstr ""
 "3. Für den WebRTC-Lecktest muss der Benutzer auf die Schaltfläche \"Test starten\" klicken. Der Test ist sehr schnell und einfach. Zur Durchführung des Tests wird nur Javascript verwendet (Quellcode ist "
 "enthalten). Während des Tests wird der Internet-Browser auf WebRTC-IP-Lecks getestet. Weitere Informationen finden Sie <a target=_blank href=\"https://bash.ws/webrtc-leak-test\">hier</a>."
@@ -293,3 +292,43 @@ msgstr "<b>Test starten</b>"
 
 msgid "DNS may be leaking."
 msgstr "DNS kann undicht sein."
+
+msgid "DNS is not leaking."
+msgstr "DNS ist nicht undicht."
+
+msgid "You use the same ISP for the DNS and Internet. if \"%s\" is your VPN then your connection is 100%% secured."
+msgstr "Sie verwenden denselben ISP für DNS und Internet. Wenn \"%s\" Ihr VPN ist, ist Ihre Verbindung 100%% sgesichert."
+
+msgid "IP might be leaking."
+msgstr "IP könnte undicht sein."
+
+msgid "The WebRTC is able to get your public IP. Consider to disable WebRTC."
+msgstr "WebRTC ist in der Lage, Ihre öffentliche IP zu erhalten. Erwägen Sie, WebRTC zu deaktivieren."
+
+msgid "No IPs is visible to WebRTC"
+msgstr "Keine IPs ist für WebRTC sichtbar"
+
+msgid "IP is not leaking."
+msgstr "IP ist nicht undicht."
+
+msgid "Your current IP is not used for torrenting. You use different ISP for torrenting and for the Internet browsing. if \"%s\" belongs to VPN then you are 100%% secured."
+msgstr "Ihre aktuelle IP wird nicht für Torrenting verwendet. Sie verwenden einen anderen ISP für Torrenting und für das Surfen im Internet. Wenn \"%s\" zu VPN gehört, sind Sie 100%% gesichert."
+
+msgid "IP may be leaking."
+msgstr "IP kann undicht sein."
+
+msgid "Your current IP is used by torrenting software. But, if \"%s\" is your VPN provider then you are 100%% secured and there is nothing to worry about. If you are not connected to VPN, consider to use VPN."
+msgstr ""
+"Ihre aktuelle IP wird von Torrenting-Software verwendet. Aber, wenn \"%s\" Ihr VPN-Anbieter ist, dann sind Sie 100%% gesichert und es gibt nichts zu befürchten. Wenn Sie nicht mit einem VPN verbunden sind, "
+"sollten Sie VPN verwenden."
+
+msgid "Your mail doesn't contain your IP and IPs owned by your ISP. if \"%s\" belongs to VPN then you are 100%% secured."
+msgstr "Ihre Mail enthält nicht Ihre IP und IPs, die Ihrem ISP gehören. Wenn \"%s\" zu VPN gehört, dann sind Sie 100%% gesichert."
+
+msgid "IP is leaking."
+msgstr "IP ist undicht."
+
+msgid "Your IP exists in the mail header. But, if \"%s\" is your VPN provider then you are 100%% secured and there is nothing to worry about. If you are not connected to VPN, please consider to use VPN."
+msgstr ""
+"Ihre IP existiert im Mail-Header. Aber, wenn \"%s\" Ihr VPN-Anbieter ist, dann sind Sie 100%% gesichert und es gibt nichts zu befürchten. Wenn Sie nicht mit einem VPN verbunden sind, sollten Sie die "
+"Verwendung eines VPN in Betracht ziehen."

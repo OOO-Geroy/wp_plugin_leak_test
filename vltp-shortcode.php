@@ -579,9 +579,11 @@ function generate_test_conclusion_by_html($xpath)
 			"asn" => "",
 			"country" => "",
 			"country_name" => "",
-			"ip" => sprintf(__(trim($str), 'vpn-leaks-test'), ...$replace),
+			"ip" => sprintf(__($str, 'vpn-leaks-test'), ...$replace),
 			"type" => "conclusion"
 		]);
+
+		var_dump($str);
 	}
 	
 	return $conclusions;
@@ -631,7 +633,7 @@ function prepareConclusionForInt($str)
 		return preg_replace('/(^"|"$)/m', '', $s);
 	}, $result);
 
-	$new_str = preg_replace($re, '"%s"', str_replace("%", "%%", $str));
+	$new_str = trim(preg_replace($re, '"%s"', str_replace("%", "%%", $str)));
 
 	return [$new_str, $result];
 }
