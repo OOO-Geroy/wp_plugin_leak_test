@@ -172,7 +172,7 @@ function vltp_test_result($row)
 
 	}
 
-	if ($results && !$results['error']) {
+	if ($results && !isset($results['error'])) {
 
 		$total  = 0;
 		foreach ($results as $k => $v) {
@@ -395,6 +395,7 @@ function get_test_data($url, $type)
 
 function get_test_data_by_html($url, $type)
 {
+	libxml_use_internal_errors(true);
 	$html = load_test_html($url);
 	$doc = new DOMDocument();
 	$doc->loadHTML($html);
