@@ -170,11 +170,7 @@ function vltp_test_result($row)
 
 		if ($code >= 20 && $code < 30) $results['error'] = $msg;
 
-		echo $msg;
 	}
-
-
-	//var_dump($results);
 
 	if ($results && !$results['error']) {
 
@@ -583,7 +579,6 @@ function generate_test_conclusion_by_html($xpath)
 			"type" => "conclusion"
 		]);
 
-		var_dump($str);
 	}
 	
 	return $conclusions;
