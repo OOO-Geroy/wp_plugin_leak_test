@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: VPN Leaks Test Package\n"
 "POT-Creation-Date: 2021-07-21 23:59+0300\n"
-"PO-Revision-Date: 2021-07-22 21:36+0300\n"
+"PO-Revision-Date: 2021-07-22 21:58+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -332,3 +332,12 @@ msgid "Your IP exists in the mail header. But, if \"%s\" is your VPN provider th
 msgstr ""
 "Ihre IP existiert im Mail-Header. Aber, wenn \"%s\" Ihr VPN-Anbieter ist, dann sind Sie 100%% gesichert und es gibt nichts zu befürchten. Wenn Sie nicht mit einem VPN verbunden sind, sollten Sie die "
 "Verwendung eines VPN in Betracht ziehen."
+
+msgid "No torrent header found. Please try again..."
+msgstr "Kein Torrent-Header gefunden. Bitte versuchen Sie es erneut..."
+
+msgid "No mail header found. Please try again..."
+msgstr "Kein Mail-Header gefunden. Bitte versuchen Sie es erneut..."
+
+msgid "No DNS servers found. Try again..."
+msgstr "Keine DNS-Server gefunden. Versuchen Sie es erneut..."
