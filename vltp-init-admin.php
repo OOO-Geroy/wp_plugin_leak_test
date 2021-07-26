@@ -140,7 +140,7 @@ function recursive_lang_copy($src, $dst)
 			if (is_dir($src . '/' . $file)) {
 				recursive_lang_copy($src . '/' . $file, $dst . '/' . $file);
 			} elseif (!file_exists($dst . '/' . $file)) {
-				copy($src . '/' . $file, $dst . '/' . $file);
+				copy($src . '/' . $file, $dst . '/' . dirname(plugin_basename(__FILE__)) . '-' . $file);
 			}
 		}
 	}
@@ -149,7 +149,7 @@ function recursive_lang_copy($src, $dst)
 
 function recursive_lang_delete()
 {
-	foreach (glob(WP_CONTENT_DIR . '/languages/plugins/vpn-leaks-test-*') as $file) {
+	foreach (glob(WP_CONTENT_DIR . '/languages/plugins/' . dirname(plugin_basename(__FILE__)) . '-*') as $file) {
 		unlink($file);
 	}
 }
