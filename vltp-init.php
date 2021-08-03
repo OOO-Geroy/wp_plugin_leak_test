@@ -33,7 +33,7 @@ function vltp_init()
  */
 function vltp_default_progress_image()
 {
-	return '<img id="vltp_progress_image_preview" src="' . plugin_dir_url(__FILE__) . 'include/ajax-loader.gif" />';
+	return '<img id="vltp_progress_image_preview" src="' . plugin_dir_url(__FILE__) . 'include/ajax-loader.svg" />';
 }
 
 if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'vltp_test_email_check') {

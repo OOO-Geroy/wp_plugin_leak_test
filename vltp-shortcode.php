@@ -61,7 +61,7 @@ function vltp_shortcode($attrs)
 	}
 
 	if (!$image) {
-		$image = plugin_dir_url(__FILE__) . 'include/ajax-loader.gif';
+		$image = plugin_dir_url(__FILE__) . 'include/ajax-loader.svg';
 	}
 
 	global $wp;

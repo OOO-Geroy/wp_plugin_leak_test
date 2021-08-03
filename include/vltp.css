@@ -1,54 +1,112 @@
-.vltp-test .vltp-start {
-	padding:0 10px;
-	background:#ddd;
-	border-radius:20px;
-	display:inline-block;
-	cursor:pointer;
-	width:250px;
-	text-align:center;
-	height:110px;
-	position:relative;
-	line-height:110px;
-	font-size:40px;
+.vltp-test {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.vltp-test .vltp-title,
-.vltp-test .vltp-results div ,
+.vltp-test .vltp-start {
+  padding: 15px 30px;
+  background: linear-gradient(to right, #56ccf2 0%, #2f80ed 51%, #56ccf2 100%);
+  background-size: 200% auto;
+  display: inline-block;
+  cursor: pointer;
+  min-width: 220px;
+  height: 65px;
+  text-align: center;
+  position: relative;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #777;
+  transition: background-position 0.5s ease;
+  box-sizing: border-box;
+}
+
+@media (max-width: 414px) {
+  .vltp-test .vltp-start {
+    width: 100%;
+  }
+}
+
+.vltp-test .vltp-start:hover {
+  background-position: right center;
+}
+
+.vltp-test .vltp-results {
+  display: grid;
+  row-gap: 20px;
+}
+
+.vltp-test .vltp-info {
+  margin-top: 15px;
+}
+
+.vltp-test .vltp-results > div {
+  display: flex;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.vltp-test .vltp-results img {
+  width: 30px;
+  height: 20px;
+  object-fit: contain;
+}
+
 .vltp-test .vltp-conclusion div {
-	margin-top:10px;
+  margin-top: 10px;
+}
+
+.vltp-test .vltp-conclusion div:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.vltp-test .vltp-title {
+  margin: 20px 0 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
 }
 
 .vltp-test .vltp-conclusion {
-	border-top:1px solid #555;
-	margin-top:10px;
+  border-top: 1px solid #555;
+  margin-top: 15px;
+  width: 100%;
 }
 
 .vltp-test .vltp-start img {
-	position:absolute;
-	left:0;
-	right:0;
-	top:0;
-	bottom:0;
-	margin:auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-height: 90%;
 }
 
 #vltp-test-img {
-	width:1px;
-	height:1px;
-	position:absolute;
-	right:0;
-	bottom:0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .vltp-test .vltp-results div,
 .vltp-test .vltp-conclusion div {
-	line-height:20px;
+  line-height: 20px;
 }
 
 .vltp-test .vltp-results div img {
-	vertical-align:middle;
-	display:inline-block;
-	border: 1px solid #b0b0b0;
-	padding: 1px;
-	margin-bottom:2px;
+  vertical-align: middle;
+  display: inline-block;
+  border: 1px solid #b0b0b0;
+  padding: 1px;
+  margin-bottom: 2px;
 }

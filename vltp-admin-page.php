@@ -286,7 +286,7 @@ function vltp_admin_page_edit( $id, $row ) {
 		$row['vltp_start'] = '<b>'.__( 'Start test', 'vpn-leaks-test' ).'</b>';
 		$row['vltp_progress_image'] = 0;
 		$row['vltp_type'] = 'dns';
-		$row['vltp_result'] = '<div>%ip <img src="%flag" /> %country_name %asn</div>';
+		$row['vltp_result'] = '<div>%ip <img src="%flag" width="30" height="20" /> %country_name %asn</div>';
 		$row['vltp_conclusion'] = '<div>%text</div>';
 	}
 	
