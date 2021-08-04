@@ -16,6 +16,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 define('VLTP_NONCE','vpn-leaks-nonce');
 define('VLTP_FILE',__FILE__);
+define('VLTP_PLUGIN_NAME', dirname(plugin_basename(__FILE__)));
 
 require_once dirname( __FILE__ ) . '/vltp-init.php';
 

@@ -72,7 +72,7 @@ function vltp_admin_init()
  */
 function vltp_admin_menu()
 {
-	$hook = add_options_page(__('VPN leaks test', 'vpn-leaks-test'), __('VPN leaks test', 'vpn-leaks-test'),  'manage_options', 'vltp-admin-page',  'vltp_admin_page');
+	$hook = add_options_page(__('VPN leaks test', VLTP_PLUGIN_NAME), __('VPN leaks test', VLTP_PLUGIN_NAME),  'manage_options', 'vltp-admin-page',  'vltp_admin_page');
 
 	if ($hook) {
 		add_action("load-$hook", 'vltp_admin_help');
@@ -140,7 +140,7 @@ function recursive_lang_copy($src, $dst)
 			if (is_dir($src . '/' . $file)) {
 				recursive_lang_copy($src . '/' . $file, $dst . '/' . $file);
 			} elseif (!file_exists($dst . '/' . $file)) {
-				copy($src . '/' . $file, $dst . '/' . dirname(plugin_basename(__FILE__)) . '-' . $file);
+				copy($src . '/' . $file, $dst . '/' . VLTP_PLUGIN_NAME . '-' . $file);
 			}
 		}
 	}
@@ -149,7 +149,7 @@ function recursive_lang_copy($src, $dst)
 
 function recursive_lang_delete()
 {
-	foreach (glob(WP_CONTENT_DIR . '/languages/plugins/' . dirname(plugin_basename(__FILE__)) . '-*') as $file) {
+	foreach (glob(WP_CONTENT_DIR . '/languages/plugins/' . VLTP_PLUGIN_NAME . '-*') as $file) {
 		unlink($file);
 	}
 }

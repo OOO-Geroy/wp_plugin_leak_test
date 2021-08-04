@@ -21,7 +21,7 @@ function vltp_admin_page() {
 	
 	if ( ( $action != 'edit' && $action != 'add' ) || !empty( $nonce ) ) {
 ?>
-		<h1 class="wp-heading-inline"><?php echo __( 'VPN leaks test configuration', 'vpn-leaks-test' ) ?></h1>
+		<h1 class="wp-heading-inline"><?php echo __( 'VPN leaks test configuration', VLTP_PLUGIN_NAME ) ?></h1>
 		<a href="<?php echo $add_url; ?>" class="page-title-action">Add New VPN Test</a>
 
 		<hr class="wp-header-end">
@@ -43,27 +43,27 @@ function vltp_admin_page() {
 		$has_errors = false;
 
 		if ( empty( $type ) ) {
-			vltp_admin_page_error( __( 'Please choose the Test Type', 'vpn-leaks-test') );
+			vltp_admin_page_error( __( 'Please choose the Test Type', VLTP_PLUGIN_NAME) );
 			$has_errors = true;
 		}
 		
 		if ( empty( vltp_test_type_name( $type ) ) ) {
-			vltp_admin_page_error( __( 'Wrong Test Type', 'vpn-leaks-test') );
+			vltp_admin_page_error( __( 'Wrong Test Type', VLTP_PLUGIN_NAME) );
 			$has_errors = true;
 		}
 		
 		if ( empty( $result ) ) {
-			vltp_admin_page_error( __( 'Please enter the Test Result HTML', 'vpn-leaks-test') );
+			vltp_admin_page_error( __( 'Please enter the Test Result HTML', VLTP_PLUGIN_NAME) );
 			$has_errors = true;
 		}
 
 		if ( empty( $conclusion ) ) {
-			vltp_admin_page_error( __( 'Please enter the Conclusion Result HTML', 'vpn-leaks-test') );
+			vltp_admin_page_error( __( 'Please enter the Conclusion Result HTML', VLTP_PLUGIN_NAME) );
 			$has_errors = true;
 		}
 
 		if ( empty( $start ) ) {
-			vltp_admin_page_error( __( 'Please enter caption for the Start Button', 'vpn-leaks-test') );
+			vltp_admin_page_error( __( 'Please enter caption for the Start Button', VLTP_PLUGIN_NAME) );
 			$has_errors = true;
 		}
 
@@ -163,7 +163,7 @@ function vltp_admin_page_delete( $id ) {
 	$id = intval( $id );
 	$wpdb->delete( $wpdb->prefix.'vltp',array( 'vltp_id'=>$id ) );
 	echo '<div class="notice notice-success is-dismissible"><p>';
-	echo sprintf( __( 'The VPN test %d deleted successfully', 'vpn-leaks-test' ), $id );
+	echo sprintf( __( 'The VPN test %d deleted successfully', VLTP_PLUGIN_NAME ), $id );
 	echo '</p></div>';
 }
 
@@ -175,7 +175,7 @@ function vltp_admin_page_delete( $id ) {
 function vltp_test_updated( $id ) {
 	$id = intval( $id );
 	echo '<div class="notice notice-success is-dismissible"><p>';
-	echo sprintf( __( 'The VPN test %d updated successfully', 'vpn-leaks-test'), $id );
+	echo sprintf( __( 'The VPN test %d updated successfully', VLTP_PLUGIN_NAME), $id );
 	echo '</p></div>';
 }
 
@@ -186,7 +186,7 @@ function vltp_test_updated( $id ) {
  */
 function vltp_test_inserted() {
 	echo '<div class="notice notice-success is-dismissible"><p>';
-	echo __('The VPN test inserted successfully', 'vpn-leaks-test');
+	echo __('The VPN test inserted successfully', VLTP_PLUGIN_NAME);
 	echo '</p></div>';
 }
 
@@ -201,7 +201,7 @@ function vltp_admin_page_list() {
 	$total = $wpdb->get_var( 'SELECT count(*) FROM '.$wpdb->prefix.'vltp' );
 
 	if (!$total) {
-		echo '<br>'.__( 'No tests was added. Please use "<b>Add New VPN test</b>" button to add new test.', 'vpn-leaks-test' );
+		echo '<br>'.__( 'No tests was added. Please use "<b>Add New VPN test</b>" button to add new test.', VLTP_PLUGIN_NAME );
 		return;
 	}
 
@@ -237,10 +237,10 @@ function vltp_admin_page_list() {
  */
 function vltp_test_type_name( $type ) {
 	$names = array();
-	$names['dns'] = __( 'DNS Leak Test' , 'vpn-leaks-test');
-	$names['email'] = __('Email IP Leak Test', 'vpn-leaks-test');
-	$names['webrtc'] = __('WebRTC Leak Test', 'vpn-leaks-test');
-	$names['torrent'] = __('Torrent Leak Test', 'vpn-leaks-test');
+	$names['dns'] = __( 'DNS Leak Test' , VLTP_PLUGIN_NAME);
+	$names['email'] = __('Email IP Leak Test', VLTP_PLUGIN_NAME);
+	$names['webrtc'] = __('WebRTC Leak Test', VLTP_PLUGIN_NAME);
+	$names['torrent'] = __('Torrent Leak Test', VLTP_PLUGIN_NAME);
 	
 	return isset( $names[ $type ] ) ? $names[ $type ] : '';
 }
@@ -268,10 +268,10 @@ function vltp_admin_page_edit( $id, $row ) {
 	}
 	
 	if ($id) {
-		echo '<h2>'.__( 'VPN Test', 'vpn-leaks-test' ).' #'.$id.'</h2>';
+		echo '<h2>'.__( 'VPN Test', VLTP_PLUGIN_NAME ).' #'.$id.'</h2>';
 	}
 	else {
-		echo '<h2>'.__( 'New VPN Test', 'vpn-leaks-test' ).'</h2>';
+		echo '<h2>'.__( 'New VPN Test', VLTP_PLUGIN_NAME ).'</h2>';
 	}
 	
 	if ($row) {
@@ -283,7 +283,7 @@ function vltp_admin_page_edit( $id, $row ) {
 		$row['vltp_conclusion'] = stripslashes( $options[ 'vltp_conclusion' ] );
 	}
 	else {
-		$row['vltp_start'] = '<b>'.__( 'Start test', 'vpn-leaks-test' ).'</b>';
+		$row['vltp_start'] = '<b>'.__( 'Start test', VLTP_PLUGIN_NAME ).'</b>';
 		$row['vltp_progress_image'] = 0;
 		$row['vltp_type'] = 'dns';
 		$row['vltp_result'] = '<div>%ip <img src="%flag" width="30" height="20" /> %country_name %asn</div>';
@@ -297,10 +297,10 @@ function vltp_admin_page_edit( $id, $row ) {
 	foreach ( $types as $k=>$v ) {
 	
 		if ( $k == $row['vltp_type'] ) {
-			$type_select .= '<option selected="selected" value="'.esc_attr( $k ).'">'.esc_attr__( $v, 'vpn-leaks-test' ).'</option>';
+			$type_select .= '<option selected="selected" value="'.esc_attr( $k ).'">'.esc_attr__( $v, VLTP_PLUGIN_NAME ).'</option>';
 		}
 		else {
-			$type_select .= '<option value="'.esc_attr( $k ).'">'.esc_attr__( $v, 'vpn-leaks-test' ).'</option>';
+			$type_select .= '<option value="'.esc_attr( $k ).'">'.esc_attr__( $v, VLTP_PLUGIN_NAME ).'</option>';
 		}
 	
 	}
@@ -319,7 +319,7 @@ function vltp_admin_page_edit( $id, $row ) {
 	}
 	
 	$progress_image_input.= '<input type="hidden" name="vltp_progress_image" id="vltp_progress_image" value="'.esc_attr( $image_id ).'" class="regular-text" />';
-	$progress_image_input.= '<input type="button" class="button-primary" value="'.__( 'Select image', 'vpn-leaks-test' ).'" id="vltp_progress_image_manager"/>';
+	$progress_image_input.= '<input type="button" class="button-primary" value="'.__( 'Select image', VLTP_PLUGIN_NAME ).'" id="vltp_progress_image_manager"/>';
 	
 	$start_input = '<input id="vltp_start" name="vltp_start" type="text" value="'.esc_html( $row['vltp_start'] ).'" />';
 	$result_input = '<textarea id="vltp_result" name="vltp_result" spellcheck="false">'.esc_html( $row['vltp_result'] ).'</textarea>';
@@ -332,7 +332,7 @@ function vltp_admin_page_edit( $id, $row ) {
 	$result_help .= '<br><b>%asn</b> ASN of the IP address';
 	$result_help .= '<br><b>%flag</b> The URL to picture of IP Country Flag';
 	
-	$result_help = __( $result_help, 'vpn-leaks-test' );
+	$result_help = __( $result_help, VLTP_PLUGIN_NAME );
 	
 	$conclusion_input = '<textarea id="vltp_conclusion" name="vltp_conclusion" spellcheck="false">'.esc_html( $row['vltp_conclusion'] ).'</textarea>';
 	
@@ -340,25 +340,25 @@ function vltp_admin_page_edit( $id, $row ) {
 	$conclusion_help .= 'The following format characters for "<strong>Test conclusion</strong>" are available:<br>';
 	$conclusion_help .= '<br><b>%text</b> the conclusion text';
 	
-	$conclusion_help = __( $conclusion_help, 'vpn-leaks-test' );
+	$conclusion_help = __( $conclusion_help, VLTP_PLUGIN_NAME );
 	
 	echo '<form id="addtest" method="post" action="" class="validate">';
 	echo '<input id="vltp_id" name="vltp_id" type="hidden" value="'.esc_attr( $id ).'" />';
 	echo wp_nonce_field( -1, VLTP_NONCE );
 	echo '<table class="form-table">';
-	echo vltp_admin_page_edit_input( 'Leak Test Type', $type_select, __( 'Please choose the test type from the list', 'vpn-leaks-test' ), 'vltp_type' );
-	echo vltp_admin_page_edit_input( 'Progress image', $progress_image_input, __( 'Select an image for progress bar', 'vpn-leaks-test' ), 'vltp_progress_image_manager' );
-	echo vltp_admin_page_edit_input( 'Start button caption', $start_input, __( 'Enter an HTML for <b>Start test</b> button', 'vpn-leaks-test' ), 'vltp_start' );
-	echo vltp_admin_page_edit_input_ex( 'Test Results line by line HTML', $result_input, __( 'This HTML is used for formatting the test results line by line. '.$result_help, 'vpn-leaks-test' ), 'vltp_result' );
-	echo vltp_admin_page_edit_input_ex( 'Test Conclusion HTML', $conclusion_input, __( 'This HTML is used for formatting the tests conclusion line by line. '.$conclusion_help, 'vpn-leaks-test' ), 'vltp_conclusion' );
+	echo vltp_admin_page_edit_input( 'Leak Test Type', $type_select, __( 'Please choose the test type from the list', VLTP_PLUGIN_NAME ), 'vltp_type' );
+	echo vltp_admin_page_edit_input( 'Progress image', $progress_image_input, __( 'Select an image for progress bar', VLTP_PLUGIN_NAME ), 'vltp_progress_image_manager' );
+	echo vltp_admin_page_edit_input( 'Start button caption', $start_input, __( 'Enter an HTML for <b>Start test</b> button', VLTP_PLUGIN_NAME ), 'vltp_start' );
+	echo vltp_admin_page_edit_input_ex( 'Test Results line by line HTML', $result_input, __( 'This HTML is used for formatting the test results line by line. '.$result_help, VLTP_PLUGIN_NAME ), 'vltp_result' );
+	echo vltp_admin_page_edit_input_ex( 'Test Conclusion HTML', $conclusion_input, __( 'This HTML is used for formatting the tests conclusion line by line. '.$conclusion_help, VLTP_PLUGIN_NAME ), 'vltp_conclusion' );
 	echo '</table>';
 	
 	if ($id) {
-		echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Update Test', 'vpn-leaks-test' ).'">';
+		echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Update Test', VLTP_PLUGIN_NAME ).'">';
 		echo '<a href="'.add_query_arg( array( 'page' => 'vltp-admin-page'), admin_url( 'admin.php' ) ).'">Cancel</a></p>';
 	}
 	else {
-		echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Add New Test', 'vpn-leaks-test' ).'">';
+		echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Add New Test', VLTP_PLUGIN_NAME ).'">';
 		echo '<a href="'.add_query_arg( array( 'page' => 'vltp-admin-page'), admin_url( 'admin.php' ) ).'">Cancel</a></p>';
 	}
 	echo '</form>';

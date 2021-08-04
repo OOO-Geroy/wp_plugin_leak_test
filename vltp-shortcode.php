@@ -72,21 +72,21 @@ function vltp_shortcode($attrs)
 	$script_array['vltp_test_id'] = mt_rand(100000000, 999999999);
 	$script_array['vltp_url'] = home_url(add_query_arg(array('vltp_test_id' => $script_array['vltp_test_id'], 'vltp_id' => $id), $wp->request));
 	$script_array['vltp_ajax_url'] = admin_url('admin-ajax.php');
-
+	
 	if ($row['vltp_type'] == 'email') {
 		$m = $script_array['vltp_test_id'] . '@bash.ws';
-		$script_array['vltp_email_message'] = sprintf(__('Please send an email to <a href="mailto:%s">%s</a>. The email subject and body doesn\'t matter. Do not refresh the page.', 'vpn-leaks-test'), $m, $m);
+		$script_array['vltp_email_message'] = sprintf(__('Please send an email to <a href="mailto:%s">%s</a>. The email subject and body doesn\'t matter. Do not refresh the page.', VLTP_PLUGIN_NAME), $m, $m);
 	}
 
 	if ($row['vltp_type'] == 'torrent') {
 		$m = 'https://bash.ws/torrent/' . $script_array['vltp_test_id'];
-		$script_array['vltp_torrent_message'] = sprintf(__('Please download the torrent <a href="%s">%s.torrent</a>. Do not refresh the page.', 'vpn-leaks-test'), $m, $script_array['vltp_test_id']);
+		$script_array['vltp_torrent_message'] = sprintf(__('Please download the torrent <a href="%s">%s.torrent</a>. Do not refresh the page.', VLTP_PLUGIN_NAME), $m, $script_array['vltp_test_id']);
 	}
 
 	wp_localize_script('vltp-js', 'vltp_settings_' . $id, $script_array);
 
 	$content = '<div class="vltp-test">';
-	$content .= '<div class="vltp-start" data-type="' . esc_attr($row['vltp_type']) . '" data-id="' . esc_attr($id) . '">' . __($row['vltp_start'], 'vpn-leaks-test') . '</div>';
+	$content .= '<div class="vltp-start" data-type="' . esc_attr($row['vltp_type']) . '" data-id="' . esc_attr($id) . '">' . __($row['vltp_start'], VLTP_PLUGIN_NAME) . '</div>';
 
 	$test_id = isset($_REQUEST['vltp_test_id']) ? intval($_REQUEST['vltp_test_id']) : 0;
 	$vltp_id = isset($_REQUEST['vltp_id']) ? intval($_REQUEST['vltp_id']) : 0;
@@ -204,13 +204,13 @@ function vltp_test_result($row)
 		$content .= '<div class="vltp-title">';
 
 		if ($row['vltp_type'] == 'dns') {
-			$content .= sprintf(_n('You use %d DNS server', 'You use %d DNS servers', $total, 'vpn-leaks-test'), $total);
+			$content .= sprintf(_n('You use %d DNS server', 'You use %d DNS servers', $total, VLTP_PLUGIN_NAME), $total);
 		} else if ($row['vltp_type'] == 'email') {
-			$content .= sprintf(_n('Your email contains %d IP', 'Your email contains %d IPs', $total, 'vpn-leaks-test'), $total);
+			$content .= sprintf(_n('Your email contains %d IP', 'Your email contains %d IPs', $total, VLTP_PLUGIN_NAME), $total);
 		} else if ($row['vltp_type'] == 'webrtc') {
-			$content .= sprintf(_n('WebRTC is able to see %d IP', 'WebRTC is able to see %d IPs', $total, 'vpn-leaks-test'), $total);
+			$content .= sprintf(_n('WebRTC is able to see %d IP', 'WebRTC is able to see %d IPs', $total, VLTP_PLUGIN_NAME), $total);
 		} else if ($row['vltp_type'] == 'torrent') {
-			$content .= sprintf(_n('Your torrent application shares %d IP', 'Your torrent application shares %d IPs', $total, 'vpn-leaks-test'), $total);
+			$content .= sprintf(_n('Your torrent application shares %d IP', 'Your torrent application shares %d IPs', $total, VLTP_PLUGIN_NAME), $total);
 		}
 
 		$content .= '</div>';
@@ -276,7 +276,7 @@ function vltp_test_result($row)
 		}
 		$content .= '</div>';
 	} else {
-		$content .= '<div class="vltp-results">' . __($results['error'] ? $results['error'] : 'The Test failed, please try again...', 'vpn-leaks-test') . '</div>';
+		$content .= '<div class="vltp-results">' . __($results['error'] ? $results['error'] : 'The Test failed, please try again...', VLTP_PLUGIN_NAME) . '</div>';
 	}
 
 	return $content;
@@ -566,7 +566,7 @@ function generate_test_conclusion_by_html($xpath)
 			"asn" => "",
 			"country" => "",
 			"country_name" => "",
-			"ip" => __(trim($node->childNodes[0]->textContent), 'vpn-leaks-test'),
+			"ip" => __(trim($node->childNodes[0]->textContent), VLTP_PLUGIN_NAME),
 			"type" => "conclusion"
 		]);
 	}
@@ -576,7 +576,7 @@ function generate_test_conclusion_by_html($xpath)
 			"asn" => "",
 			"country" => "",
 			"country_name" => "",
-			"ip" => sprintf(__($str, 'vpn-leaks-test'), ...$replace),
+			"ip" => sprintf(__($str, VLTP_PLUGIN_NAME), ...$replace),
 			"type" => "conclusion"
 		]);
 
