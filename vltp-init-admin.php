@@ -122,8 +122,6 @@ function copy_lang()
 	$to = WP_CONTENT_DIR . '/languages/plugins';
 
 	recursive_lang_copy($from, $to);
-
-	rmdir($from);
 }
 
 function delete_lang()
