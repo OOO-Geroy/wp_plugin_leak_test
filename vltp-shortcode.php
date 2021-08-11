@@ -252,7 +252,7 @@ function vltp_test_result($row)
 			$r['%country_name'] = esc_attr($v['country_name']);
 			$r['%asn'] = esc_attr($v['asn']);
 			$r['%ip'] = esc_attr($v['ip']);
-			$r['%flag'] = plugin_dir_url(__FILE__) . 'include/flags/' . esc_attr($v['country']) . '.png';
+			$r['%flag'] = plugin_dir_url(__FILE__) . 'include/flags/' . esc_attr($v['country'] ?? 'empty' ) . '.png';
 
 			$content .=  str_replace(array_keys($r), array_values($r), $row['vltp_result']);
 		}
