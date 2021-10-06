@@ -318,7 +318,10 @@ function vltp_test_webrtc()
 
 	$data = array('ajax' => '1', 'ips' => $ips, 'ip' => $ip);
 
-	$response = wp_remote_post(esc_url_raw($url), array('body' => $data));
+	$response = wp_remote_post(esc_url_raw($url), array(
+		'sslverify' => false,
+		'body' => $data
+	));
 
 	if (is_wp_error($response)) {
 		wp_send_json(array('done' => 0, 'error' => __('The internal communication error occurred...', 'vpn-leak-test')));
@@ -346,7 +349,10 @@ function vltp_test_email_check()
 	$url = 'https://bash.ws/email-leak-test/test/' . $test_id;
 
 	$data = array('ajax' => '1');
-	$response = wp_remote_post(esc_url_raw($url), array('body' => $data));
+	$response = wp_remote_post(esc_url_raw($url), array(
+		'sslverify' => false,
+		'body' => $data
+	));
 
 	if (is_wp_error($response)) {
 		wp_send_json(array('done' => 0, 'error' => __('The internal communication error occurred...', 'vpn-leak-test')));
@@ -375,7 +381,10 @@ function vltp_test_torrent_check()
 	$url = 'https://bash.ws/torrent-leak-test/test/' . $test_id;
 
 	$data = array('ajax' => '1');
-	$response = wp_remote_post(esc_url_raw($url), array('body' => $data));
+	$response = wp_remote_post(esc_url_raw($url), array(
+		'sslverify' => false,
+		'body' => $data
+	));
 
 	if (is_wp_error($response)) {
 		wp_send_json(array('done' => 0, 'error' => __('The internal communication error occurred...', 'vpn-leak-test')));
@@ -421,6 +430,7 @@ function load_test_html($url)
 	$ip = get_client_ip();
 
 	$response = wp_remote_post(esc_url_raw($url), [
+		'sslverify' => false,
 		'body' => [
 			'ip' => $ip
 		],
@@ -441,6 +451,7 @@ function get_ip_detail($url)
 	$ip = get_client_ip();
 
 	$response = wp_remote_post(esc_url_raw("$url?json"), [
+		'sslverify' => false,
 		'body' => [
 			'ip' => $ip
 		],
